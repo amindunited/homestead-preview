@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homestead Support | Fresh home cooking, just the way you like it</title>
+<meta name="description" content="Homestead Support is a small Melbourne business. We come to your kitchen, or your parent's, and cook the dishes your family loves. Book the 3-hour Launch Offer or ask for a call back.">
+<meta name="theme-color" content="#F7F4EE">
+<meta property="og:title" content="Homestead Support | Fresh home cooking, just the way you like it">
+<meta property="og:description" content="A small Melbourne business that cooks fresh, familiar meals in your own kitchen, or your parent's.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<!-- Fonts used on this page
+     Headings, buttons, tabs, wordmark: Aleo (400/500/600/700), then Georgia, "Times New Roman", serif
+     Body text, forms, labels, nav: Roboto (400/500/700), then system-ui, -apple-system, "Segoe UI", Arial, sans-serif
+     Loaded from Google Fonts. If they fail to load, the fallbacks above are used in that order. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Brand (majority of colour use) */
+  --brand:#6EBFB8;
+  --brand-50:#DFF4E8; --brand-100:#B6E1CB; --brand-300:#2D8583; --brand-500:#005865;
+  --grey-xl:#F7F4EE; --grey-l:#C7C7C5; --grey:#888884; --grey-d:#3A3A38; --grey-xd:#2E2E2C;
+  --black:#0F0F0F; --white:#fff;
+  /* Primary: call to action buttons only (default, hover, pressed) */
+  --primary:#7A0B2A; --primary-100:#F9C5BD; --primary-200:#FF797C; --primary-300:#9E0009; --primary-500:#470604;
+  --cta:var(--primary); --cta-hover:var(--primary-300); --cta-press:var(--primary-500);
+  /* Neutral */
+  --neutral-xl:#EAE6E1; --neutral-l:#D5C9B8; --neutral:#C4AC8B; --neutral-d:#675342; --neutral-xd:#392718;
+  /* Secondary: tags, focus ring, links */
+  --secondary-l:#C8DBE4; --secondary:#2B5F8E; --secondary-d:#003D64;
+  /* Tertiary and accents: transition shades only with their base colour */
+  --tertiary-l:#EEEAF7; --tertiary:#9D87D2; --tertiary-d:#673695;
+  --yellow-l:#FFFCE5; --yellow:#FFD10A; --yellow-d:#F4A600; --peony:#F83C52;
+  /* Validation */
+  --success-l:#EFF9E7; --success:#2DCB48; --success-d:#006D00;
+  --warning-l:#FFE1CB; --warning:#FF6C00; --error:#F43319;
+
+  --font-head:"Aleo", Georgia, "Times New Roman", serif;
+  --font-body:"Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --radius:16px;
+  --wrap:1120px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--grey-xl);color:var(--grey-d);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:var(--secondary)}
+h1,h2,h3{font-family:var(--font-head);color:var(--grey-d);line-height:1.15;margin:0 0 .5em;font-weight:700}
+h1{font-size:clamp(2.2rem,5.2vw,3.6rem);letter-spacing:-.01em;font-weight:600}
+h2{font-size:clamp(1.75rem,3.6vw,2.5rem)}
+h3{font-size:1.25rem;font-weight:600}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--secondary);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--grey-d);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+.eyebrow{font-family:var(--font-body);font-size:.8125rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-500);margin:0 0 .75rem}
+section{padding:88px 0;scroll-margin-top:72px}
+.lead{font-size:1.2rem;max-width:62ch}
+
+/* Buttons: primary colour call to action, with a colour + lift micro animation.
+   Default Primary #7A0B2A -> hover Primary shade #9E0009 -> pressed/disabled Primary shade #470604 (revised palette).
+   White text meets AA contrast on all three states. */
+.btn{--b:var(--cta);display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:44px;padding:9px 22px;border-radius:10px;border:2px solid transparent;font:500 1.0625rem/1.2 var(--font-head);text-decoration:none;cursor:pointer;
+  transition:background-color .28s ease,border-color .28s ease,color .28s ease,transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease}
+.btn-cta{background:var(--cta);color:#fff}
+.btn-cta:hover{background:var(--cta-hover);transform:translateY(-2px);box-shadow:0 8px 18px rgba(122,11,42,.28)}
+.btn-cta:active,.btn-cta:disabled{background:var(--cta-press);transform:translateY(0) scale(.98);box-shadow:none}
+.btn-ghost{background:transparent;color:var(--cta);border-color:var(--cta)}
+.btn-ghost:hover{background:var(--cta-hover);border-color:var(--cta-hover);color:#fff;transform:translateY(-2px);box-shadow:0 8px 18px rgba(158,0,9,.22)}
+.btn-ghost:active{background:var(--cta-press);border-color:var(--cta-press);color:#fff;transform:translateY(0) scale(.98);box-shadow:none}
+/* on the dark teal band */
+.btn-onDark{background:var(--cta);color:#fff;border-color:#fff}
+.btn-onDark:hover{background:var(--cta-hover);transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.28)}
+.btn-onDark:active{background:var(--cta-press);transform:translateY(0) scale(.98);box-shadow:none}
+nav.primary .btn{min-height:42px;padding:8px 20px;white-space:nowrap}
+nav.primary a{white-space:nowrap}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(58,58,56,.1)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--grey-d);font:500 1.25rem/1 var(--font-head)}
+.brand img{width:44px;height:44px}
+nav.primary ul{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+nav.primary a:not(.btn){color:var(--grey-d);text-decoration:none;font-weight:500}
+nav.primary a:not(.btn):hover{color:var(--brand-500);text-decoration:underline;text-underline-offset:6px}
+.menu-btn{display:none;background:none;border:2px solid var(--grey-d);color:var(--grey-d);border-radius:10px;min-height:44px;padding:0 14px;font:700 .95rem var(--font-head);cursor:pointer}
+
+/* Hero */
+.hero{padding:72px 0 96px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--brand-500);display:block;font-size:.85em;font-weight:600;line-height:1.15;margin-top:.1em}
+.hero .eyebrow{text-wrap:balance;text-transform:none;letter-spacing:0;font-size:1.0625rem;font-weight:500}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.hero .note{margin-top:20px;font-size:.95rem;color:#55554F}
+/* Hero offer: a clickable tablecloth (red gingham with lace trim) */
+.hero-art{position:relative;display:block;aspect-ratio:1/1;max-width:440px;margin-left:auto;width:100%;border-radius:24px;overflow:hidden;text-decoration:none;color:var(--grey-d);
+  background-color:#fff;
+  background-image:linear-gradient(90deg,rgba(122,11,42,.42) 50%,transparent 50%),linear-gradient(rgba(122,11,42,.42) 50%,transparent 50%);
+  background-size:44px 44px;
+  box-shadow:0 18px 40px rgba(58,58,56,.18);
+  transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease}
+.hero-art::after{content:"";position:absolute;left:0;right:0;bottom:0;height:36px;background:radial-gradient(circle at 18px 0,transparent 12px,var(--grey-xl) 13px) 0 0/36px 36px repeat-x;border-top:0;pointer-events:none}
+.hero-art:hover{transform:translateY(-4px);box-shadow:0 26px 50px rgba(58,58,56,.24)}
+.hero-art:active{transform:translateY(0) scale(.99)}
+.hero-art:focus-visible{outline:4px solid var(--secondary);outline-offset:4px}
+.hero-art .card{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:76%;background:#fff;border-radius:var(--radius);padding:22px 22px 22px;box-shadow:0 14px 34px rgba(58,58,56,.2);text-align:center}
+.hero-art .card p{margin:0}
+.hero-art .card .btn{margin-top:16px;width:100%;pointer-events:none}
+.hero-art:hover .card .btn{background:var(--cta);color:#fff;box-shadow:0 8px 18px rgba(122,11,42,.22)}
+.hero-art:active .card .btn{background:var(--cta-press);border-color:var(--cta-press);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0;padding:0;list-style:none}
+.chips li{background:var(--brand-50);color:var(--brand-500);font-size:.85rem;font-weight:500;padding:4px 12px;border-radius:999px}
+
+/* Who we are */
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.values{display:grid;gap:16px}
+.value{display:flex;gap:16px;align-items:flex-start;background:var(--surf);border-radius:var(--radius);padding:20px}
+.value .dot{flex:none;width:44px;height:44px;border-radius:50%;background:var(--brand);display:grid;place-items:center;font:700 1.15rem var(--font-head);color:var(--grey-d)}
+.value h3{margin:0 0 4px}
+.value p{margin:0;color:#4a4a47}
+
+/* What we do */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.card-box{background:var(--surf);border-radius:var(--radius);padding:30px 26px;border-top:6px solid var(--brand);box-shadow:0 1px 0 rgba(58,58,56,.06)}
+.card-box.alt{border-top-color:var(--secondary)}
+.card-box.mid{border-top-color:var(--neutral-d)}
+.card-box h3{margin-bottom:.4em}
+.card-box .tag{background:var(--brand-50);color:var(--brand-500)}
+.card-box.alt .tag{background:var(--secondary-l);color:var(--secondary-d)}
+.card-box.mid .tag{background:var(--neutral-l);color:var(--neutral-d)}
+.card-box p{margin:0;color:#4a4a47}
+.tag{display:flex;align-items:center;justify-content:center;text-align:center;width:100%;height:36px;font-size:.75rem;font-weight:700;letter-spacing:.08em;line-height:1.3;text-transform:uppercase;color:var(--secondary-d);background:var(--secondary-l);padding:6px 14px 2px;border-radius:999px;white-space:nowrap;margin-bottom:18px}
+
+/* How it works */
+
+.two>*,.contact-grid>*,.hero-grid>*,.forms{min-width:0}
+.cta-row{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px}
+
+/* Partner band */
+
+/* FAQ */
+.faq{max-width:820px;margin:36px 0 0}
+.faq-h{font-size:1.4rem;margin:32px 0 12px;color:var(--brand-500)}
+.faq-h:first-child{margin-top:0}
+.faq details{background:var(--surf);border-radius:12px;margin-bottom:12px;border:1px solid rgba(58,58,56,.1)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 56px 18px 22px;font:600 1.1rem/1.4 var(--font-head);position:relative;border-radius:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font:400 1.6rem/1 var(--font-body);color:var(--secondary)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details[open] summary{border-bottom:1px solid rgba(58,58,56,.08);border-bottom-left-radius:0;border-bottom-right-radius:0}
+.faq .ans{padding:16px 22px 6px}
+.faq .ans p{color:#4a4a47}
+
+/* Contact */
+
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.contact-aside p{color:#4a4a47}
+form.enquiry{background:var(--surf);border-radius:var(--radius);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label,.legend{font-weight:500;font-size:.95rem}
+.opt{font-weight:400;color:#66665F}
+input,select,textarea{font:inherit;color:var(--grey-d);background:#fff;border:1.5px solid var(--grey);border-radius:10px;padding:12px 14px;min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--secondary);outline-offset:1px;border-color:var(--secondary)}
+.field.check{flex-direction:row;gap:12px;}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:.95rem}
+.check input{width:22px;min-height:22px;height:22px;margin-top:3px;flex:none;accent-color:var(--secondary)}
+.form-note{font-size:.9rem;color:#55554F;margin:0}
+.status{grid-column:1/-1;margin:0;padding:14px 16px;border-radius:10px;background:var(--brand-50);color:var(--brand-500);font-weight:500}
+.status[hidden]{display:none}
+.status.warn{background:var(--yellow-l);border-left:5px solid var(--yellow);color:var(--grey-d)}
+.hp{position:absolute;left:-9999px}
+
+/* Placeholders for content still to be confirmed */
+mark.ph{background:var(--yellow);color:var(--grey-d);padding:1px 6px;border-radius:4px;font-weight:500}
+
+/* Footer */
+footer{background:var(--grey-xd);color:#E9E6DF;padding:56px 0 40px}
+footer a{color:#fff}
+.foot{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start}
+.foot .brand{color:#fff}
+.foot .brand .disc{flex:none;width:44px;height:44px;border-radius:50%;background:var(--grey-xl);display:flex;align-items:center;justify-content:center}
+.foot .brand .disc img{width:42px;height:42px;flex:none}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px}
+.fine{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);font-size:.875rem;color:#C9C5BB}
+
+/* Responsive */
+@media (max-width:900px){
+  section{padding:64px 0}
+  .hero-grid,.two,.contact-grid,.foot{grid-template-columns:minmax(0,1fr)}
+  .hero-art{margin:0 auto;max-width:360px}
+  .cards{grid-template-columns:1fr}
+  .price-card{position:static}
+}
+@media (max-width:1000px){
+  .js .menu-btn{display:inline-flex;align-items:center}
+  .js nav.primary{display:none;position:absolute;left:0;right:0;top:100%;background:var(--grey-xl);border-bottom:1px solid rgba(58,58,56,.12);padding:12px 20px 20px}
+  .js nav.primary.open{display:block}
+  .js nav.primary ul{flex-direction:column;align-items:stretch;gap:4px}
+  .js nav.primary li a:not(.btn){display:block;padding:12px 4px}
+  nav.primary ul{flex-wrap:wrap;gap:8px 18px}
+  .brand{font-size:1.1rem}
+}
+@media (max-width:560px){
+  form.enquiry{grid-template-columns:1fr;padding:22px}
+  .hero{padding:44px 0 64px}
+}
+/* Hero offer card */
+.kicker{font:700 .8125rem/1.2 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--brand-500);margin:0 0 6px}
+.hero-art .card .price-sm{font:700 3.2rem/1 var(--font-head);color:var(--grey-d);margin:2px 0 6px}
+.hero-art .card .card-line{font:600 1.05rem/1.35 var(--font-head)}
+.hero-art .card .card-line.small{font:500 .95rem/1.4 var(--font-body);color:#4a4a47;margin-top:8px}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+
+/* Trial + how it works */
+#how .lead{margin-bottom:1.6em}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.steps li{display:grid;grid-template-columns:40px 1fr;column-gap:16px;align-items:center;position:relative;padding-bottom:26px}
+.steps li>div{display:contents}
+.steps li:last-child{padding-bottom:0}
+.steps li:not(:last-child)::before{content:"";position:absolute;left:18px;top:46px;bottom:6px;width:3px;border-radius:2px;background:var(--brand-100)}
+.steps .ico{grid-column:1;grid-row:1;width:40px;height:40px;border-radius:50%;background:var(--bg);color:var(--brand);border:3px solid var(--brand);display:grid;place-items:center}
+.steps .ico svg{width:26px;height:26px}
+.steps .ico svg path{stroke-width:2.5px;vector-effect:non-scaling-stroke}
+.steps h3{grid-column:2;grid-row:1;margin:0;min-height:40px;display:flex;align-items:center}
+.steps p{grid-column:2;grid-row:2;margin:4px 0 0;color:var(--grey-d)}
+.price-card{position:static}
+}
+@media (max-width:1000px){
+  .js .menu-btn{display:inline-flex;align-items:center}
+  .js nav.primary{display:none;position:absolute;left:0;right:0;top:100%;background:var(--grey-xl);border-bottom:1px solid rgba(58,58,56,.12);padding:12px 20px 20px}
+  .js nav.primary.open{display:block}
+  .js nav.primary ul{flex-direction:column;align-items:stretch;gap:4px}
+  .js nav.primary li a:not(.btn){display:block;padding:12px 4px}
+  nav.primary ul{flex-wrap:wrap;gap:8px 18px}
+  .brand{font-size:1.1rem}
+}
+@media (max-width:560px){
+  form.enquiry{grid-template-columns:1fr;padding:22px}
+  .hero{padding:44px 0 64px}
+}
+/* Hero offer card */
+.kicker{font:700 .8125rem/1.2 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--brand-500);margin:0 0 6px}
+.hero-art .card .price-sm{font:700 3.2rem/1 var(--font-head);color:var(--grey-d);margin:2px 0 6px}
+.hero-art .card .card-line{font:600 1.05rem/1.35 var(--font-head)}
+.hero-art .card .card-line.small{font:500 .95rem/1.4 var(--font-body);color:#4a4a47;margin-top:8px}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+
+/* Trial + how it works */
+#how .lead{margin-bottom:1.6em}
+.price-card{background:var(--surf);border-radius:var(--radius);padding:32px;border-top:6px solid var(--brand-500);position:sticky;top:96px;text-align:center}
+.price-card .price{font:700 4rem/1 var(--font-head);margin:6px 0 8px;color:var(--grey-d)}
+.price-card .price-sub{font:600 1.1rem/1.4 var(--font-head);margin:0 0 14px}
+.price-card .spots-line{margin:0 0 6px;color:var(--brand-500)}
+.price-card .exchange{margin:0 0 6px}
+.price-card .small{font-size:.95rem;color:#55554F;margin:0 0 22px}
+.price-actions{display:grid;gap:12px}
+
+/* Tabs and forms */
+.tabs{display:flex;gap:0;margin:0;flex-wrap:wrap;align-items:flex-end}
+.tab{font:600 1.0625rem/1.2 var(--font-head);padding:14px 26px 12px;min-height:50px;border-radius:14px 14px 0 0;border:0;background:var(--grey-l);color:var(--grey-d);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.tab:hover{background:#B9B9B6}
+.tab[aria-selected="true"]{background:var(--surf);color:var(--grey-d)}
+.tab[aria-selected="true"]:hover{background:var(--surf)}
+form.enquiry{border-top-left-radius:0}
+.enquiry[hidden]{display:none}
+.spots-line-inline{font-weight:500}
+.limit-note{background:var(--warning-l);border-left:6px solid var(--warning);border-radius:8px;padding:14px 16px;margin:0 0 1em;font-size:.98rem;color:var(--grey-d)}
+.contact-aside .limit-note,.limit-note strong{color:var(--grey-d)}
+
+/* Meet your cook */
+
+.cook-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.cook-grid>*{min-width:0}
+.cook-photo{margin:0;min-width:0}
+.slides{overflow:hidden;border-radius:var(--radius);touch-action:pan-y}
+.track{display:flex;transition:transform .35s ease}
+.slide{flex:0 0 100%;min-width:0;margin:0;transition:visibility 0s linear .35s}
+.js .slide[aria-hidden="true"]{visibility:hidden}
+.js .slide[aria-hidden="false"]{visibility:visible;transition-delay:0s}
+.slide img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius)}
+.photo-ph{aspect-ratio:4/5;border-radius:var(--radius);border:2px dashed var(--brand-300);background:var(--surf);display:grid;place-items:center;text-align:center;padding:24px}
+.photo-ph p{margin:0}
+.slide figcaption{font-size:.9rem;margin-top:10px;color:#4a4a47;min-height:1.5em}
+.slider-ctl{display:none;align-items:center;justify-content:center;gap:12px;margin-top:14px}
+.js .slider-ctl{display:flex}
+.arrow{width:44px;height:44px;border-radius:50%;border:2px solid var(--brand-500);background:var(--surf);color:var(--brand-500);display:grid;place-items:center;cursor:pointer;padding:0;transition:background-color .2s ease,color .2s ease}
+.arrow:hover{background:var(--brand-500);color:#fff}
+.dots{display:flex;gap:2px}
+.dots button{width:28px;height:28px;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center}
+.dots button::before{content:"";width:10px;height:10px;border-radius:999px;background:var(--surf);border:1.5px solid var(--brand-300);transition:width .25s ease,background-color .25s ease}
+.dots button[aria-current="true"]::before{width:24px;background:var(--brand-500);border-color:var(--brand-500)}
+#cook .chips li.more{background:transparent;border:1px dashed var(--brand-300)}
+.cook-body h2{margin-bottom:.6em}
+#cook .chips{justify-content:flex-start;margin:22px 0 14px}
+#cook .chips li{background:var(--surf);border:1px solid var(--brand-100);padding:5px 14px}
+.cook-note{font-size:.95rem;color:#4a4a47;margin:0 0 .6em}
+#cook .cta-row{margin-top:24px}
+@media (max-width:900px){
+  .cook-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+  .photo-ph,.slide img{aspect-ratio:1/1}
+}
+#how .hours{color:var(--secondary)}
+</style>
+
+<style>
+/* Section rhythm: hero cream, then white and cream alternate. --bg is the section colour, --surf the colour of cards sitting on it. */
+:root{--bg:var(--grey-xl);--surf:#fff}
+#who,#for,#know,#faqs{background:#fff;--bg:#fff;--surf:var(--grey-xl)}
+#cook,#how,#trust,#contact{background:var(--grey-xl);--bg:var(--grey-xl);--surf:#fff}
+.hero{--bg:var(--grey-xl);--surf:#fff}
+/* What's included list in the price card */
+.price-card .incl{list-style:none;margin:0 0 14px;padding:0;font:600 1.1rem/1.5 var(--font-head)}
+.price-card .incl li{margin:0}
+/* Before you book + trust blocks */
+.know-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.know-grid>*{min-width:0}
+.panel{background:var(--surf);border-radius:var(--radius);padding:28px 26px;border-top:6px solid var(--brand)}
+.panel.alt{border-top-color:var(--secondary)}
+.panel.mid{border-top-color:var(--neutral-d)}
+.panel h3{margin:0 0 .5em}
+.panel p{margin:0 0 .8em;color:#4a4a47}
+.panel p:last-child{margin-bottom:0}
+.panel strong{color:var(--grey-d)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.trust-grid>*{min-width:0}
+.notify{margin-top:14px}
+@media (max-width:900px){
+  .know-grid,.trust-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+}
+</style>
+</head>
+<body>
+<!-- BEFORE PUBLISHING: public liability insurance must be active (the page says the service is insured). Confirm the Kimjang photo and the line about Mum's words with her. -->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Homestead Support, home">
+      <img src="assets/logo.svg" alt="" width="44" height="44">
+      <span>Homestead Support</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="primary" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#cook">Meet your cook</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a class="btn btn-cta" id="navContact" href="mailto:hi@homesteadsupport.com.au">Contact us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <div class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Personalised in-home cooking for Older Australians and families</p>
+        <h1>Fresh home cooking, <em>the way you like it.</em></h1>
+        <p class="lead">We're a small Melbourne business. We come to your parent's kitchen and help cooking the dishes they love, then we leave the kitchen clean.</p>
+        <div class="actions">
+          <a class="btn btn-cta" href="#contact" data-form="trial">Book the Launch Offer</a>
+          <a class="btn btn-ghost" href="#contact" data-form="callback">Request a call back</a>
+        </div>
+        <p class="note">Starting in Melbourne's north-east: Banyule, Nillumbik and nearby suburbs.</p>
+      </div>
+      <a class="hero-art" href="#how" aria-label="Learn more about the Launch Offer: $200 for 3 hours of cooking with a complimentary meet and greet. Limited to our first 10 households">
+        <div class="card">
+          <p class="kicker">Launch Offer</p>
+          <p class="price-sm">$200</p>
+          <p class="card-line">3 hours of cooking with a complimentary meet and greet</p>
+          <p class="card-line small"><span class="spots">Limited to our first 10 households</span></p>
+          <span class="btn btn-ghost" aria-hidden="true">Learn more</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <section id="who">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">Who we are</p>
+        <h2>A small business that starts in the kitchen.</h2>
+        <p>We're a small, local business, started by a qualified chef with seven years of professional experience.</p>
+        <p>We began Homestead because food is often how families look after each other. When Mum or Dad is eating less, or no longer cooking the dishes they love, the whole family notices. So we come to them: to their kitchen, with their recipes.</p>
+      </div>
+      <div class="values">
+        <div class="value"><span class="dot" aria-hidden="true">1</span><div><h3>Familiar</h3><p>Dishes from your family's table, made the way you remember them. Teach us a recipe, or simply tell us the taste you remember.</p></div></div>
+        <div class="value"><span class="dot" aria-hidden="true">2</span><div><h3>Fresh</h3><p>Cooked fresh in your own kitchen. We don't deliver pre-made meals in a box.</p></div></div>
+        <div class="value"><span class="dot" aria-hidden="true">3</span><div><h3>Respectful</h3><p>Your kitchen, your pace. We cook, we clean up, and we leave it just as tidy as we found it, or better.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET YOUR COOK -->
+  <section id="cook">
+    <div class="wrap cook-grid">
+      <div class="cook-photo" id="cookSlider" role="group" aria-roledescription="carousel" aria-label="Photos of Inyoung, her food and Kimjang">
+      <!-- TO ADD A PHOTO: inside a slide, replace the <div class="photo-ph">...</div> with
+           <img src="assets/your-photo.jpg" alt="Describe the photo" width="800" height="1000" loading="lazy">
+           and replace the yellow caption. To reorder, move the <figure class="slide"> blocks.
+           Slides and dots update by themselves. CONFIRM WITH MUM before using the Kimjang photo. -->
+      <div class="slides">
+        <div class="track">
+        <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+          <div class="photo-ph"><p><mark class="ph">Photo to add: Inyoung (profile)</mark></p></div>
+          <figcaption><mark class="ph">Caption to add</mark></figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+          <div class="photo-ph"><p><mark class="ph">Photo to add: My food</mark></p></div>
+          <figcaption><mark class="ph">Caption to add</mark></figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+          <div class="photo-ph"><p><mark class="ph">Photo to add: Kimjang in South Korea</mark></p></div>
+          <figcaption><mark class="ph">Caption to add</mark></figcaption>
+        </figure>
+        </div>
+      </div>
+      <div class="slider-ctl">
+        <button type="button" class="arrow" data-dir="-1" aria-label="Previous photo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="dots"></div>
+        <button type="button" class="arrow" data-dir="1" aria-label="Next photo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+      <div class="cook-body">
+        <p class="eyebrow">Meet your cook</p>
+        <h2>Hi, I'm Inyoung. I'll be the one in your kitchen.</h2>
+        <p>I'm a qualified chef with seven years in professional kitchens, including as Sous Chef at Gilbert Street Hotel.</p>
+        <p>On a visit to my parents in South Korea, I joined in Kimjang, the tradition of a family making a winter's worth of Kimchi together. They're in their 80s, and I could see how hard everyday jobs had become. <!-- CONFIRM WITH MUM before publishing: the line about this possibly being their last Kimjang. --> Mum said this might be their last Kimjang. They don't want to leave their home, and I wanted them to keep eating the food they've always loved.</p>
+        <p>That's why I started Homestead Support. I'm also a service designer, so I listen first, then keep improving things based on what each family tells me.</p>
+        <p>When I come to your kitchen, I'll cook the way I'd want someone to cook for my own parents.</p>
+        <ul class="chips cook-chips" aria-label="Qualifications and checks">
+          <li>Qualified chef (TAFE SA)</li>
+          <li>Food safety trained</li>
+          <li>NDIS Worker Screening Check</li>
+          <li>Public liability insurance</li>
+          <li class="more">More available on request</li>
+        </ul>
+        <p class="cook-note">I'm a cook, not a dietitian or nurse, so I follow the advice of your parent's health professional.</p>
+        <p class="cook-note">Past kitchens in Adelaide and Perth: Gilbert Street Hotel (Sous Chef), Goodine Bistro, The Wharf, The Lion Hotel, The Bayswater Hotel and Hotel Northbridge.</p>
+        <div class="cta-row"><a class="btn btn-ghost" href="#contact" data-form="callback">Request a call back</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section id="for">
+    <div class="wrap">
+      <p class="eyebrow">Who it's for</p>
+      <h2>Home cooking in your parent's own kitchen.</h2>
+      <div class="cards">
+        <article class="card-box">
+          <span class="tag">Arranging it for Mum or Dad</span>
+          <h3>One less thing to worry about</h3>
+          <p>You can't always be there to cook, or to check what's in the fridge. We'll talk with you and your parent together, and plan food they will actually enjoy.</p>
+        </article>
+        <article class="card-box alt">
+          <span class="tag">Still cooking for themselves</span>
+          <h3>Their kitchen, their food</h3>
+          <p>Cooking every day can wear anyone out. We give your parent an extra pair of hands, so they still enjoy a proper home-cooked meal, made the way they like it. They stay in the kitchen as much as they want to.</p>
+        </article>
+        <article class="card-box mid">
+          <span class="tag">Whatever your family cooks</span>
+          <h3>Not one culture. Yours.</h3>
+          <p>Tell us what's on your family's table and who's eating. For the Launch Offer we cook Modern Australian, Italian, French, Greek and Korean, with more on the way. Something else? Let's talk about what they love.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TRIAL + HOW IT WORKS -->
+  <section id="how" class="trial">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">Our Launch Offer</p>
+        <h2>How your 3-hour Launch Offer works.</h2>
+        <p class="lead">We're just starting out, so our first 10 households get a special Launch Offer price of $200. In return, we ask for one hour of honest feedback. We want to learn how this works in real kitchens, so we can get it right for every family after you. Three hours is unhurried: time to cook properly, and time to talk while it's on the stove.</p>
+        <p class="hours"><strong>In all, about 5 hours with your cook:</strong> a 1-hour complimentary meet and greet, a 3-hour cooking day and a 1-hour feedback chat, plus a little time for the call and menu planning.</p>
+        <ol class="steps">
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><h3>We phone you</h3><p>Book the Launch Offer or ask for a call back. We'll phone you to talk it through.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><div><h3>Complimentary meet and greet at home</h3><p>A separate visit before cooking day, with no extra charge. We meet you and your parent face to face, talk through their favourite dishes and how they like to eat, and have a gentle look at the kitchen where we'll be cooking. It's part of the Launch Offer now, and we'd like to make it part of every package, so we're keen to see how it goes.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></span><div><h3>Choose the menu</h3><p>After the meet and greet, we send a few menus the way you prefer to be contacted. You and your parent choose the one you like best.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-2 11H5L3 9z"/><path d="M8 9l4-6 4 6"/></svg></span><div><h3>Sort the groceries</h3><p>You choose and buy the groceries, so the $200 is all you pay us for the session. We send a shopping list if you'd like to shop yourself. If you'd rather we shop, that's an optional extra at $60 per hour during the Launch Offer.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7z"/><path d="M2 11h20"/><path d="M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3"/></svg></span><div><h3>Cooking day</h3><p>Your cook comes to the home for 3 hours, cooks the way you like it, and tidies up before they go.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20H6z"/><path d="M6 10h12M9 5v2M9 13v3"/></svg></span><div><h3>Choice of menu and number of meals</h3><p>You choose the menu, and the number of meals depends on what you choose. Meals can be stored or shared, with a note on what to eat first and what to freeze.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5z"/><path d="M8 9h8M8 12h5"/></svg></span><div><h3>Feedback chat</h3><p>In exchange for the Launch Offer price, you give us an hour of honest feedback, at your home or by video: what worked, what didn't, and what you'd change. We're learning from every kitchen, and it helps us get this right for every family after you.</p></div></li>
+        </ol>
+      </div>
+      <aside class="price-card" aria-label="Launch Offer price">
+        <p class="kicker">Launch Offer</p>
+        <p class="price">$200</p>
+        <ul class="incl"><li>3 hours of cooking</li><li>Choice of menu and number of meals</li><li>A tidy kitchen</li></ul>
+        <p class="spots-line"><strong class="spots">Limited to our first 10 households</strong></p>
+        <p class="exchange">In exchange for a 1-hour feedback chat with us.</p>
+        <p class="small">You choose and buy the groceries, so this is all you pay us for the session. Our cook shopping for you is optional, at $60 per hour during the Launch Offer.</p>
+        <div class="price-actions">
+          <a class="btn btn-cta" href="#contact" data-form="trial">Book the Launch Offer</a>
+          <a class="btn btn-ghost" href="#contact" data-form="callback">Request a call back</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- BEFORE YOU BOOK -->
+  <section id="know">
+    <div class="wrap">
+      <p class="eyebrow">Before you book</p>
+      <h2>What we do, and what we don't.</h2>
+      <div class="know-grid">
+        <div class="panel">
+          <h3>We cook</h3>
+          <p>Homestead is a home-cooking service. We cook meals in your home using groceries you choose and buy.</p>
+          <p>We are not a personal care or nursing service: we don't help with showering, dressing, toileting, moving around, or medications, and we don't give medical or nutrition advice. We are not a registered aged care provider or a dietitian.</p>
+          <p>If your parent needs that kind of support, their aged care provider or GP is the right place to start. If they have a medical diet or swallowing difficulty, please follow their health professional's instructions and tell us before the first booking.</p>
+        </div>
+        <div class="panel alt">
+          <h3>Allergies and dietary needs</h3>
+          <p>Cooking safely around an allergy takes the two of us. Here is how we share it.</p>
+          <p><strong>What you do:</strong> Tell us about every allergy, intolerance and texture need before the first booking, and tell us if anything changes. You choose and buy the groceries, so please check labels against your parent's list.</p>
+          <p><strong>What we do:</strong> We ask again at every visit. We read labels on what's in the kitchen, and we'll stop and tell you if something doesn't look right.</p>
+          <p><strong>What we can't promise:</strong> A home kitchen can't be made allergen-free, and we can't guarantee it. If your parent has a severe allergy (one that has caused anaphylaxis), please talk to us before you book. Inyoung, at <a class="mailLink" href="#">our team</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY, RIGHTS, PRIVACY, FUNDING -->
+  <section id="trust">
+    <div class="wrap">
+      <p class="eyebrow">Safety and the fine print</p>
+      <h2>Safety, your rights and your privacy.</h2>
+      <div class="trust-grid">
+        <div class="panel">
+          <h3>Safety and screening</h3>
+          <p>Your cook holds a current NDIS Worker Screening Check.</p>
+          <p><mark class="ph">To confirm: public liability cover with [insurer name]. Add only if held.</mark></p>
+          <p><mark class="ph">To confirm: Food Safety Supervisor certificate. Add only if held.</mark></p>
+        </div>
+        <div class="panel alt">
+          <h3>Your rights</h3>
+          <p>Our services come with guarantees that can't be excluded under the Australian Consumer Law. Nothing in our terms limits those rights.</p>
+        </div>
+        <div class="panel mid">
+          <h3>Privacy</h3>
+          <p>We collect your name, contact details, address and dietary or health information so we can plan and cook safely. Only your cook sees it. We store it securely, don't sell it, and you can ask to see or correct it anytime: <a class="mailLink" href="#">our team</a>.</p>
+          <p>Full policy: <mark class="ph">[link to add]</mark></p>
+        </div>
+        <div class="panel">
+          <h3>Funding</h3>
+          <p>Our services are currently privately paid. We are not yet able to be billed to Support at Home, CHSP or NDIS budgets.</p>
+          <p class="notify"><a class="btn btn-ghost" id="notifyLink" href="#">Let me know when you can work with my parent's package</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faqs">
+    <div class="wrap">
+      <p class="eyebrow">FAQs</p>
+      <h2>Questions families ask us.</h2>
+      <div class="faq">
+      <h3 class="faq-h">About Homestead</h3>
+<details>
+          <summary>What is Homestead Support?</summary>
+          <div class="ans"><p>We're a small Melbourne business. We send a skilled cook into your home, or your parent's, to cook the food you know and love, in your own kitchen, with your own pots, the way you like it. We start with a short list of cuisines and, as we grow, we'll match more cooks and languages.</p></div>
+        </details>
+<details>
+          <summary>Is this a meal delivery service?</summary>
+          <div class="ans"><p>No. We don't deliver pre-made meals. Your cook comes to the home and cooks fresh there, stores the extra meals, and cleans up afterwards. It sits alongside meal delivery services rather than replacing them.</p></div>
+        </details>
+<details>
+          <summary>Who is Homestead for?</summary>
+          <div class="ans"><p>Older Australians who want home-cooked food from their own culture, in their own kitchen, and the daughters, sons and families who arrange it for Mum or Dad and worry about whether they're eating well.</p></div>
+        </details>
+<details>
+          <summary>Where do you work?</summary>
+          <div class="ans"><p>We're starting in Melbourne's north-east, in Banyule and Nillumbik, including Greensborough. If you're somewhere else, contact us anyway and tell us your suburb. We can't promise, but we'd like to know where families need us.</p></div>
+        </details>
+<details>
+          <summary>Do you have a cook for our language and cuisine?</summary>
+          <div class="ans"><p>Right now Homestead has one cook, and we're growing. Tell us the food your parent loves and the language they speak, and we'll say honestly whether we can match both before you book. If we can't yet, leave your details and we'll let you know when we find the right cook.</p></div>
+        </details>
+      <h3 class="faq-h">The Launch Offer</h3>
+<details>
+          <summary>What's in the Launch Offer?</summary>
+          <div class="ans"><p>A phone call, then a complimentary meet and greet at home: we talk through your parent's food and take a gentle look at their kitchen. Afterwards we send you a few menus the way you prefer to be contacted, and you choose the one you like best. You choose and buy the groceries. Then comes a 3-hour cooking session where the cook prepares the menu you chose and tidies up before they go. Finally there's a 1-hour feedback chat with us.</p></div>
+        </details>
+<details>
+          <summary>Why is the Launch Offer $200, and why do you ask for feedback?</summary>
+          <div class="ans"><p>We're new, and we want to build this with the families who use it. Our first 10 households get the Launch Offer for $200. In return, we ask for one hour of honest feedback about what worked, what didn't, and what you'd change. We're learning from every kitchen we cook in, and your answers shape the service. We'll come to your home for the chat, or we can do it by video if you prefer.</p></div>
+        </details>
+<details>
+          <summary>Does my parent need to be home?</summary>
+          <div class="ans"><p>Usually, yes. Your parent will see the cook up to three times: the meet and greet, the cooking day and the feedback chat. There's time to talk while the cooking happens, but it's up to your parent how involved they'd like to be. If someone else will let the cook in, just tell us when you book.</p></div>
+        </details>
+<details>
+          <summary>Can I arrange this for my mum or dad?</summary>
+          <div class="ans"><p>Yes. You can ask for a call back or book on their behalf, and we'll include your parent in the meet and greet.</p></div>
+        </details>
+      <h3 class="faq-h">Food, shopping and meals</h3>
+<details>
+          <summary>Which cuisines do you cook?</summary>
+          <div class="ans"><p>For the Launch Offer we cook Modern Australian, Italian, French, Greek and Korean, and we're adding more over time. If your family's food isn't on the list, tell us what they love. Our cook can often make it with your guidance or from recipes you share, or we'll let you know when we find the right cook.</p></div>
+        </details>
+<details>
+          <summary>Can the cook make my parent's own recipes?</summary>
+          <div class="ans"><p>Yes. That's the point. Your parent can teach the cook a family recipe, choose the dishes, or simply tell us the taste they remember. We'd love them to stay involved in the kitchen if they want to.</p></div>
+        </details>
+<details>
+          <summary>Can you cook for special diets?</summary>
+          <div class="ans"><p>We cook with nutrition in mind, and we can cook vegetarian, salt-reduced, gluten-free and soft-texture meals. We're not set up to cook for serious or life-threatening allergies, for coeliac-level gluten-free diets, or to prepare pureed food for swallowing difficulties. Tell us about your parent's dietary needs when you book, and we'll talk them through at the consultation. If a dietitian has approved recipes or a meal plan, please share it and we'll cook it as written, provided it stays within the limits above. Those limits apply even if a plan asks for more.</p></div>
+        </details>
+<details>
+          <summary>Who buys the groceries?</summary>
+          <div class="ans"><p>You choose and buy the groceries, so the $200 is all you pay us for the session. We send a shopping list and you shop, or, if you'd rather, our cook shops for you as an optional extra at $60 per hour during the Launch Offer.</p></div>
+        </details>
+<details>
+          <summary>What about the meals in the fridge?</summary>
+          <div class="ans"><p>Meals kept in the fridge are best eaten within about 3 days. Anything you won't eat in that time can go in the freezer. Your cook will show your parent what to eat first and what to freeze. We'll talk more about this when we plan the menu.</p></div>
+        </details>
+<details>
+          <summary>Can you help organise the fridge, freezer and pantry?</summary>
+          <div class="ans"><p>Not as part of the Launch Offer, but you can ask for it in the future. Organising and cleaning a fridge, freezer and pantry takes a good understanding of your household, so it needs to be arranged in advance. Tell us you're interested when you request a call back or book, and we'll talk it through.</p></div>
+        </details>
+      <h3 class="faq-h">Our cooks, cost and contracts</h3>
+<details>
+          <summary>How are your cooks checked?</summary>
+          <div class="ans"><p>Our cook is a qualified chef with food safety training and a current NDIS Worker Screening Check. Every cook who joins us will be checked the same way. Qualifications and checks are available on request. <mark class="ph">Insurance: add the cover and insurer name only once confirmed.</mark></p></div>
+        </details>
+<details>
+          <summary>What happens after the Launch Offer, and what does it cost?</summary>
+          <div class="ans"><p>If you'd like to continue after the Launch Offer, just tell us. We'll talk through what suits your parent, and the price is adjusted accordingly.</p></div>
+        </details>
+<details>
+          <summary>Is there a contract? Do I need to cancel?</summary>
+          <div class="ans"><p>No. There's no lock-in contract, so there's nothing to cancel. If you'd like to continue the service after the Launch Offer, just tell us.</p></div>
+        </details>
+<details>
+          <summary>Do we need an aged care package to use Homestead?</summary>
+          <div class="ans"><p>No. For now, Homestead is a private service, so anyone can book without an assessment. If you'd like to explore government support for your parent, start with My Aged Care on 1800 200 422 or <a href="https://www.myagedcare.gov.au" rel="noopener">myagedcare.gov.au</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-aside">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's start with a conversation.</h2>
+        <p>Ready to go? Book the Launch Offer. <span class="spots-line-inline"><span class="spots">Limited to our first 10 households</span>.</span> Not sure yet? Ask us to call you back and we'll answer your questions.</p>
+        <p>We'll get back to you within a couple of working days.</p>
+        <p>Prefer to email? Write to <a id="emailLink" href="#">our team</a>.</p>
+        <p class="limit-note"><strong>Before you book:</strong> we can't cook for serious or life-threatening allergies, coeliac-level gluten-free diets, or pureed food for swallowing difficulties.</p>
+        <p class="form-note">Please don't include private health details in these forms. We'll ask about what we need when we speak.</p>
+      </div>
+
+      <div class="forms">
+        <div class="tabs" role="tablist" aria-label="Choose how to get in touch">
+          <button class="tab" role="tab" id="tab-trial" aria-controls="panel-trial" aria-selected="true" type="button">Book the Launch Offer</button>
+          <button class="tab" role="tab" id="tab-callback" aria-controls="panel-callback" aria-selected="false" type="button">Request a call back</button>
+        </div>
+
+        <!-- Book the Launch Offer -->
+        <form class="enquiry" id="panel-trial" role="tabpanel" aria-labelledby="tab-trial" data-subject="Homestead Launch Offer booking" novalidate>
+          <div class="field">
+            <label for="t-name">Your name</label>
+            <input id="t-name" name="Name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="t-email">Email</label>
+            <input id="t-email" name="Email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="t-phone">Phone</label>
+            <input id="t-phone" name="Phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="t-suburb">Suburb</label>
+            <input id="t-suburb" name="Suburb" type="text" autocomplete="address-level2" required>
+          </div>
+          <div class="field full">
+            <label for="t-who">Who is the Launch Offer for?</label>
+            <select id="t-who" name="Launch Offer is for" required>
+              <option value="" disabled selected>Please choose</option>
+              <option>My mum or dad</option>
+              <option>Me</option>
+              <option>Another family member</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="t-food">The food they love and their language</label>
+            <input id="t-food" name="Food and language" type="text" placeholder="e.g. Italian, speaks Italian" required>
+          </div>
+          <div class="field full">
+            <label for="t-msg">Anything else we should know? <span class="opt">(optional)</span></label>
+            <textarea id="t-msg" name="Message"></textarea>
+          </div>
+          <div class="field hp" aria-hidden="true">
+            <label for="t-web">Leave this field empty</label>
+            <input id="t-web" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field full check">
+            <input id="t-allergy" name="consent" type="checkbox" required>
+            <label for="t-allergy">I will tell Homestead about all allergies, intolerances and texture needs before the first visit. I understand I choose and buy the groceries and that a home kitchen can't be made allergen-free.</label>
+          </div>
+          <div class="field full check">
+            <input id="t-consent" name="consent" type="checkbox" required>
+            <label for="t-consent">I agree to Homestead Support using these details to reply to my request.</label>
+          </div>
+          <div class="field full">
+            <button class="btn btn-cta" type="submit">Book the Launch Offer</button>
+          </div>
+          <p class="status" role="status" aria-live="polite" hidden></p>
+        </form>
+
+        <!-- Request a call back -->
+        <form class="enquiry" id="panel-callback" role="tabpanel" aria-labelledby="tab-callback" data-subject="Homestead call back request" novalidate>
+          <div class="field">
+            <label for="c-name">Your name</label>
+            <input id="c-name" name="Name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="c-phone">Phone</label>
+            <input id="c-phone" name="Phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="field full">
+            <label for="c-time">Best time to call</label>
+            <select id="c-time" name="Best time to call" required>
+              <option value="" disabled selected>Please choose</option>
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+              <option>Any time</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="c-msg">Anything you'd like to ask us? <span class="opt">(optional)</span></label>
+            <textarea id="c-msg" name="Message"></textarea>
+          </div>
+          <div class="field hp" aria-hidden="true">
+            <label for="c-web">Leave this field empty</label>
+            <input id="c-web" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field full check">
+            <input id="c-consent" name="consent" type="checkbox" required>
+            <label for="c-consent">I agree to Homestead Support using these details to call me back.</label>
+          </div>
+          <div class="field full">
+            <button class="btn btn-cta" type="submit">Request a call back</button>
+          </div>
+          <p class="status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><span class="disc"><img src="assets/logo.svg" alt="" width="42" height="42"></span><span>Homestead Support</span></a>
+        <p style="margin-top:14px;max-width:44ch">A small Melbourne business cooking familiar food in your own kitchen.</p>
+        <p style="margin-top:10px;max-width:60ch;font-size:.95rem"><mark class="ph">[Your name] trading as [trading name] &middot; ABN [ABN]</mark> &middot; Melbourne, Victoria</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#who">Who we are</a></li>
+            <li><a href="#cook">Meet your cook</a></li>
+            <li><a href="#how">How it works</a></li>
+          <li><a href="#know">Before you book</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="fine">&copy; <span id="yr">2026</span> Homestead Support. Melbourne, Victoria, Australia.</p>
+  </div>
+</footer>
+
+<script>
+/* ---- SETTINGS: change these before you publish ---- */
+var CONTACT_EMAIL = "hi@homesteadsupport.com.au";
+var SPOTS_LEFT = 10;   /* Launch Offer spots still available (0 to 10). Update by hand. */
+/* --------------------------------------------------- */
+
+(function () {
+  var d = document;
+  d.documentElement.classList.add("js");
+  d.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Email link
+  var el = d.getElementById("emailLink");
+  el.href = "mailto:" + CONTACT_EMAIL;
+  el.textContent = CONTACT_EMAIL;
+  d.getElementById("navContact").href = "mailto:" + CONTACT_EMAIL;
+  d.querySelectorAll(".mailLink").forEach(function (a) { a.href = "mailto:" + CONTACT_EMAIL; a.textContent = CONTACT_EMAIL; });
+  var nl = d.getElementById("notifyLink");
+  if (nl) nl.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Let me know when you can work with my parent's package") + "&body=" + encodeURIComponent("Please let me know when Homestead can work with my parent's funding package.\n\nName:\nSuburb:");
+
+  // Launch Offer spots text
+  var spotsText = SPOTS_LEFT >= 10 ? "Limited to our first 10 households"
+                : SPOTS_LEFT > 0 ? "Only " + SPOTS_LEFT + " of our 10 Launch Offer spots left"
+                : "All 10 Launch Offer spots are taken. Ask us about the next one";
+  d.querySelectorAll(".spots").forEach(function (n) { n.textContent = spotsText; });
+
+  // Mobile menu
+  var btn = d.getElementById("menuBtn"), nav = d.getElementById("nav");
+  btn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+  });
+  nav.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") { nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }
+  });
+
+  // Tabs: Book the Launch Offer / Request a call back
+  var tabs = { trial: d.getElementById("tab-trial"), callback: d.getElementById("tab-callback") };
+  var panels = { trial: d.getElementById("panel-trial"), callback: d.getElementById("panel-callback") };
+  function show(which) {
+    Object.keys(tabs).forEach(function (k) {
+      var on = k === which;
+      tabs[k].setAttribute("aria-selected", on);
+      tabs[k].tabIndex = on ? 0 : -1;
+      panels[k].hidden = !on;
+    });
+  }
+  Object.keys(tabs).forEach(function (k) {
+    tabs[k].addEventListener("click", function () { show(k); });
+    tabs[k].addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        var other = k === "trial" ? "callback" : "trial";
+        show(other); tabs[other].focus();
+      }
+    });
+  });
+  d.querySelectorAll("[data-form]").forEach(function (a) {
+    a.addEventListener("click", function () { show(a.getAttribute("data-form")); });
+  });
+  show("trial");
+
+  // Forms: open the visitor's email app with the details filled in
+  function wire(form) {
+    var status = form.querySelector(".status");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.hidden = true;
+      if (form.elements.website.value) return; // spam trap
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var lines = [];
+      Array.prototype.forEach.call(form.elements, function (f) {
+        if (!f.name || f.name === "website" || f.name === "consent" || f.type === "submit" || f.tagName === "BUTTON") return;
+        if (f.value) lines.push(f.name + ": " + f.value);
+      });
+      var subject = form.getAttribute("data-subject");
+      window.location.href = "mailto:" + CONTACT_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(lines.join("\n"));
+      status.textContent = "Thank you. Your email app should now open with your details ready to send. If it doesn't, please email us at " + CONTACT_EMAIL + ".";
+      status.hidden = false;
+    });
+  }
+  wire(panels.trial); wire(panels.callback);
+})();
+</script>
+<script>
+/* Meet your cook: photo stepper */
+(function () {
+  var root = document.getElementById("cookSlider");
+  if (!root) return;
+  var track = root.querySelector(".track");
+  var slides = [].slice.call(root.querySelectorAll(".slide"));
+  var dotsBox = root.querySelector(".dots");
+  var ctl = root.querySelector(".slider-ctl");
+  var n = slides.length, i = 0;
+  if (n < 2) { ctl.style.display = "none"; return; }
+  slides.forEach(function (s, k) {
+    s.setAttribute("aria-label", (k + 1) + " of " + n);
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", "Show photo " + (k + 1) + " of " + n);
+    b.addEventListener("click", function () { go(k); });
+    dotsBox.appendChild(b);
+  });
+  var dots = [].slice.call(dotsBox.children);
+  function go(k) {
+    i = (k + n) % n;
+    track.style.transform = "translateX(" + (-100 * i) + "%)";
+    slides.forEach(function (s, j) { s.setAttribute("aria-hidden", j === i ? "false" : "true"); });
+    dots.forEach(function (d, j) {
+      if (j === i) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current");
+    });
+  }
+  [].forEach.call(root.querySelectorAll(".arrow"), function (a) {
+    a.addEventListener("click", function () { go(i + parseInt(a.getAttribute("data-dir"), 10)); });
+  });
+  root.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") { go(i + 1); }
+    else if (e.key === "ArrowLeft") { go(i - 1); }
+  });
+  var x0 = null;
+  root.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  root.addEventListener("touchend", function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+    x0 = null;
+  }, { passive: true });
+  go(0);
+})();
+</script>
+</body>
+</html>
